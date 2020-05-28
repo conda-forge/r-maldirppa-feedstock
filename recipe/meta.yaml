@@ -1,4 +1,4 @@
-{% set version = '1.0.1-2' %}
+{% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MALDIrppa_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MALDIrppa/MALDIrppa_{{ version }}.tar.gz
-  sha256: 5f9d22e64b0d214e3603eeb4ab38da9e3f7dd3ebad4e8993c07e7f109b3582ca
+  sha256: 432e97a13d102a41a50b243f7adfadc087ea93dcb782cd6bb339bdeb6281f2a5
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -46,10 +46,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=MALDIrppa
   license: GPL (>= 2)
-  summary: Provides methods for quality control and robust pre-processing and analysis of MALDI
-    mass spectrometry data.
+  summary: Provides methods for quality control and robust pre-processing and analysis of MALDI mass spectrometry data.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
