@@ -5,7 +5,7 @@ Home: https://CRAN.R-project.org/package=MALDIrppa
 
 Package license: GPL (>= 2)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Provides methods for quality control and robust pre-processing and analysis of MALDI mass spectrometry data.
 
