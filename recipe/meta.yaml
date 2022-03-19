@@ -1,4 +1,4 @@
-{% set version = "1.0.5-1" %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MALDIrppa_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MALDIrppa/MALDIrppa_{{ version }}.tar.gz
-  sha256: a52425965d43e657c8511af54f33322bd132ec082c1a857c6890d0551e689071
+  sha256: dd2505bb5e5a81eea55e687f16895cc3eaff0839cf0660902b4176e24fe5c310
 
 build:
   merge_build_host: true  # [win]
@@ -23,20 +23,21 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-maldiquant
     - r-lattice
     - r-robustbase
     - r-signal
-    - r-wmtsa
+    - r-waveslim
   run:
     - r-base
     - r-maldiquant
     - r-lattice
     - r-robustbase
     - r-signal
-    - r-wmtsa
+    - r-waveslim
 
 test:
   commands:
