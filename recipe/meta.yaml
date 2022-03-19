@@ -23,20 +23,21 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-maldiquant
     - r-lattice
     - r-robustbase
     - r-signal
-    - r-wmtsa
+    - r-waveslim
   run:
     - r-base
     - r-maldiquant
     - r-lattice
     - r-robustbase
     - r-signal
-    - r-wmtsa
+    - r-waveslim
 
 test:
   commands:
