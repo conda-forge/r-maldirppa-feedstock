@@ -1,11 +1,11 @@
-About r-maldirppa
-=================
+About r-maldirppa-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-maldirppa-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=MALDIrppa
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-maldirppa-feedstock/blob/main/LICENSE.txt)
 
 Summary: Provides methods for quality control and robust pre-processing and analysis of MALDI mass spectrometry data.
 
