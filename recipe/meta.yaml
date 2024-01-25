@@ -1,4 +1,4 @@
-{% set version = "1.1.0-1" %}
+{% set version = "1.1.0-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MALDIrppa_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MALDIrppa/MALDIrppa_{{ version }}.tar.gz
-  sha256: 95a3a4ed0a452c9a2603890dc0c082266b484c2a4d45b797d9ca984c82e1a5be
+  sha256: c324a67913d53658c750bd5f90a4274016575285969f0f82f9a160df109bdca9
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
